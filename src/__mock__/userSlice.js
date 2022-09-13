@@ -19,6 +19,3 @@ axiosMockInstanceAdapter.onGet("/users").reply(200, {
     }]
 });
 
-axiosMockInstance.get("/users").then((response) => {
-    return response
-})

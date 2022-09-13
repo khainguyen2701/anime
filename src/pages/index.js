@@ -1,7 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
+import React from "react";
+import axiosMockInstance from "src/__mock__/config";
+
+
 
 export default function Home() {
+  React.useEffect(() => {
+    const getLogin = async () => {
+      const {data} = await axiosMockInstance.get("/users")
+      console.log('data',data);
+    }
+    getLogin()
+  },[])
   return (
     <div>
       <Head>
